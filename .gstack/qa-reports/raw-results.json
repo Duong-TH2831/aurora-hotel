@@ -1,0 +1,432 @@
+{
+  "pages": [
+    {
+      "name": "home",
+      "path": "/",
+      "status": 200,
+      "title": "Aurora Hotel — Where Every Stay Becomes a Memory",
+      "linkCount": 30
+    },
+    {
+      "name": "rooms",
+      "path": "/rooms",
+      "status": 200,
+      "title": "Aurora Hotel — Where Every Stay Becomes a Memory",
+      "linkCount": 31
+    },
+    {
+      "name": "room-detail",
+      "path": "/rooms/deluxe-king",
+      "status": 200,
+      "title": "Deluxe King Room | Aurora Hotel | Aurora Hotel",
+      "linkCount": 27
+    },
+    {
+      "name": "experiences",
+      "path": "/experiences",
+      "status": 200,
+      "title": "Trải nghiệm | Aurora Hotel & Resort | Aurora Hotel",
+      "linkCount": 26
+    },
+    {
+      "name": "offers",
+      "path": "/offers",
+      "status": 200,
+      "title": "Ưu đãi | Aurora Hotel & Resort | Aurora Hotel",
+      "linkCount": 25
+    },
+    {
+      "name": "my-bookings",
+      "path": "/my-bookings",
+      "status": 200,
+      "title": "Tra Cứu Đặt Phòng | Aurora Hotel | Aurora Hotel",
+      "linkCount": 23
+    },
+    {
+      "name": "booking",
+      "path": "/booking",
+      "status": 200,
+      "title": "Đặt Phòng Nghỉ Dưỡng | Aurora Hotel | Aurora Hotel",
+      "linkCount": 23
+    },
+    {
+      "name": "login",
+      "path": "/login",
+      "status": 200,
+      "title": "Đăng nhập | Aurora Hotel & Resort | Aurora Hotel",
+      "linkCount": 2
+    }
+  ],
+  "consoleErrors": [
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-pV6dalv04R0K8V3USjTCnjhkSJOr68D3sGCOPXOz64k='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-/NNYk2lMiaaQ2COHrKgFet27MZByZVSSe05z8RCpMjo='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-/NNYk2lMiaaQ2COHrKgFet27MZByZVSSe05z8RCpMjo='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-/NNYk2lMiaaQ2COHrKgFet27MZByZVSSe05z8RCpMjo='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-/NNYk2lMiaaQ2COHrKgFet27MZByZVSSe05z8RCpMjo='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-5v3zQItzibsmfk35n2MFVnsPaCQ57Zuvy+9+dS1hlgE='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-uGPW2nb1Fxs0BjNgnb/CzfJjvTrDZDqb+xH5JNyjYKs='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-uGPW2nb1Fxs0BjNgnb/CzfJjvTrDZDqb+xH5JNyjYKs='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-uGPW2nb1Fxs0BjNgnb/CzfJjvTrDZDqb+xH5JNyjYKs='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/rooms",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/rooms",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/rooms",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/rooms",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/rooms",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/rooms/deluxe-king",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/rooms/deluxe-king",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/experiences",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/experiences",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/experiences",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/experiences",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/experiences",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/experiences",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/experiences",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/experiences",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/experiences",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/offers",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/offers",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/offers",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-pV6dalv04R0K8V3USjTCnjhkSJOr68D3sGCOPXOz64k='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-/NNYk2lMiaaQ2COHrKgFet27MZByZVSSe05z8RCpMjo='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-/NNYk2lMiaaQ2COHrKgFet27MZByZVSSe05z8RCpMjo='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-/NNYk2lMiaaQ2COHrKgFet27MZByZVSSe05z8RCpMjo='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-/NNYk2lMiaaQ2COHrKgFet27MZByZVSSe05z8RCpMjo='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-5v3zQItzibsmfk35n2MFVnsPaCQ57Zuvy+9+dS1hlgE='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-uGPW2nb1Fxs0BjNgnb/CzfJjvTrDZDqb+xH5JNyjYKs='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-uGPW2nb1Fxs0BjNgnb/CzfJjvTrDZDqb+xH5JNyjYKs='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-uGPW2nb1Fxs0BjNgnb/CzfJjvTrDZDqb+xH5JNyjYKs='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-pV6dalv04R0K8V3USjTCnjhkSJOr68D3sGCOPXOz64k='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-/NNYk2lMiaaQ2COHrKgFet27MZByZVSSe05z8RCpMjo='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-/NNYk2lMiaaQ2COHrKgFet27MZByZVSSe05z8RCpMjo='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-/NNYk2lMiaaQ2COHrKgFet27MZByZVSSe05z8RCpMjo='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-/NNYk2lMiaaQ2COHrKgFet27MZByZVSSe05z8RCpMjo='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-ZDrxqUOB4m/L0JWL/+gS52g1CRH0l/qwMhjTw5Z/Fsc='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-5v3zQItzibsmfk35n2MFVnsPaCQ57Zuvy+9+dS1hlgE='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-uGPW2nb1Fxs0BjNgnb/CzfJjvTrDZDqb+xH5JNyjYKs='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-uGPW2nb1Fxs0BjNgnb/CzfJjvTrDZDqb+xH5JNyjYKs='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    },
+    {
+      "url": "http://localhost:3003/",
+      "text": "Applying inline style violates the following Content Security Policy directive 'style-src-attr 'none''. Either the 'unsafe-inline' keyword, a hash ('sha256-uGPW2nb1Fxs0BjNgnb/CzfJjvTrDZDqb+xH5JNyjYKs='), or a nonce ('nonce-...') is required to enable inline execution. Note that hashes do not apply to event handlers, style attributes and javascript: navigations unless the 'unsafe-hashes' keyword is present. The action has been blocked."
+    }
+  ],
+  "brokenLinks": [],
+  "interactions": [
+    {
+      "test": "language-toggle",
+      "success": true,
+      "details": "Toggled from VI to EN"
+    },
+    {
+      "test": "mobile-hamburger-visible",
+      "success": true,
+      "details": "Mobile hamburger button visible: true"
+    },
+    {
+      "test": "mobile-drawer-open",
+      "success": true,
+      "details": "Mobile drawer open state: true"
+    }
+  ]
+}

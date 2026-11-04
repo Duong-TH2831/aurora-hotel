@@ -1,0 +1,675 @@
+{
+  "version": "0.1.0",
+  "name": "agent-os-v2",
+  "timestamp": "2026-07-31T21:01:57.495Z",
+  "implementationFiles": [
+    {
+      "path": "package.json",
+      "sha256": "8f82e54e66bf1fb1b67cabd7331ddf01135d4b378aaebee3bc0a93757b3542df"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "b247621c0660485b39f7e1f2035eefad7811a69b1c07f106555376c61efcec7b"
+    },
+    {
+      "path": "eslint.config.mjs",
+      "sha256": "c52302c41d89fcefda0174183e1676ba05036658891281490f717c4f560b423b"
+    },
+    {
+      "path": "README.md",
+      "sha256": "de57812aba2d03c0a69cb1262d2e140c1fd6930e2284dc6620bb3552e7537f9b"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "11942917721e54c5811f0d459e2b5ed67a661fada7359c05f1254629d2f75672"
+    },
+    {
+      "path": "CLAUDE.md",
+      "sha256": "774feba492d86b1b31f4e7d5b58d19a7721ef9b3a4b935509f491b408e561f9c"
+    },
+    {
+      "path": "GEMINI.md",
+      "sha256": "23abe1b3b028aeacaf7389a90893c077c24c009332eda2c4e2b2b4026b86530f"
+    },
+    {
+      "path": ".agents/AGENTS.md",
+      "sha256": "ad765b3e8ffdfbfef2304ece1b0a28b993012a0202410c0b21d3a543e735ec9a"
+    },
+    {
+      "path": ".github/copilot-instructions.md",
+      "sha256": "e520486e2a2f384f263f36e04b40e04bc3d2bcc3278187caad16c6e314336e2a"
+    },
+    {
+      "path": ".agent-os/catalog-lock.json",
+      "sha256": "c2d264f72e949c55c8b863811003ada28acf3bc227d181121fc791052a3af800"
+    },
+    {
+      "path": "project-manifest.yml",
+      "sha256": "39ffccc1914d2870ef149c062bcd7da1ee7941dc4b2ed82291e651515870f731"
+    },
+    {
+      "path": "docs/architecture/diagrams/diagram-manifest.yml",
+      "sha256": "d3e3c1c2ebaf03cbbf26b090284117e7d7855d57e5cde854983fb800e7317497"
+    },
+    {
+      "path": "docs/architecture/diagrams/INDEX.md",
+      "sha256": "3432ece8d600dc4f9b06e1a1f8629fc362cd2a4f79f54567dc922b3112a36b89"
+    },
+    {
+      "path": ".github/skills/agent-handoff/SKILL.md",
+      "sha256": "a3895b6cd342f4ceaea35b46a6a8cf09399e7fec9acc08e07181df440b6166d4"
+    },
+    {
+      "path": ".github/skills/architecture-design/SKILL.md",
+      "sha256": "97c3915d9483092908f1aeed6d8048d92a73394817b5b116051f157ac1908765"
+    },
+    {
+      "path": ".github/skills/backend-api/SKILL.md",
+      "sha256": "769ccccc19856abd826e48ed6f1a8ba368159f23f6c6a2ca1c160f2197375ba3"
+    },
+    {
+      "path": ".github/skills/database-design/SKILL.md",
+      "sha256": "41afc56bcad2e176154a8787f16763a8a6596718c3fae2da21da05b929775fb2"
+    },
+    {
+      "path": ".github/skills/diagram-maintenance/SKILL.md",
+      "sha256": "23b7c9b8f1afcab6e323e4946a1f505d57e31c4d03229b85d4474ef5fe5ce65d"
+    },
+    {
+      "path": ".github/skills/product-analysis/SKILL.md",
+      "sha256": "45c0d9487dc8bd53506b2d21b94b4ffb09279e026df0e181ba46f478ac18a317"
+    },
+    {
+      "path": ".github/skills/project-discovery/SKILL.md",
+      "sha256": "a52a35ddec05a626110ff85c91625ddf8d5f759c23a6d40726636add4ecdf69b"
+    },
+    {
+      "path": ".github/skills/project-onboarding/SKILL.md",
+      "sha256": "20b8774c12a6e325773b1ad1563a1c3ee550e9b95f16b1cffadd2428abc401f7"
+    },
+    {
+      "path": ".github/skills/release-deployment/SKILL.md",
+      "sha256": "4081a6a673bac91c4ff140d1fa6e6fcb5ac508b0974c95f2d41fc4bb8821483b"
+    },
+    {
+      "path": ".github/skills/security-review/SKILL.md",
+      "sha256": "e506d79215e3f3eb0e1e529aed2550456fcf43fb3e06c83577dd32516488a9f2"
+    },
+    {
+      "path": ".github/skills/testing-quality/SKILL.md",
+      "sha256": "2633bcebf5910fe6464cd0dcda9cb36d321412a746575adfc0ef69c08db9af38"
+    },
+    {
+      "path": ".github/skills/ui-ux-implementation/SKILL.md",
+      "sha256": "cdedc29326c7d3d4ea3a898ea3933d6aff83866962aa45d078c5477d80903b97"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "23dfbf45b927d033b4c6b362ce96d20cb2bf8393336089c328c6bb957005dbe4"
+    }
+  ],
+  "testIds": [
+    {
+      "path": "tests/api-rooms-fail-closed.test.ts",
+      "sha256": "b00fb5488d0eae2af4f54b54f2a7ebeb2795b283724a09f5bb3cdef2cee5bde3"
+    },
+    {
+      "path": "tests/audit-outbox.test.ts",
+      "sha256": "c6d4608df9c4f47f5d9d4666b56b907e4eb318df4e657b1121bfd708e8c57a93"
+    },
+    {
+      "path": "tests/aurora-schema-validation.test.ts",
+      "sha256": "591343fa56118d43805ccf709b3886853b7e9326e947706b3f536c9d1c10000f"
+    },
+    {
+      "path": "tests/auth-guards.test.ts",
+      "sha256": "0395a3955cc6e1cb95619b60b0fefa82250bf3380f3aa756a3f1e4c220b8da7a"
+    },
+    {
+      "path": "tests/availability.service.test.ts",
+      "sha256": "13531e1d3de1a72263efc251ab9416f2d2a1f0a5811412b49fa4cbb34b341393"
+    },
+    {
+      "path": "tests/backup-restore.test.ts",
+      "sha256": "d4c1efdebb2cc0f3130e37b77baf847f81862a86ec310739c4b77b9bed02b5f1"
+    },
+    {
+      "path": "tests/blob-adapter.test.ts",
+      "sha256": "cd2c6d5634e9d72eb565c4c2056bc03e5bf0aa1c72c76834c47de394591931ed"
+    },
+    {
+      "path": "tests/booking.service.test.ts",
+      "sha256": "51b6a7894762dfc0bb0a6c1012fdb9cb87ed37182fbfb8f4994be6c004c78db4"
+    },
+    {
+      "path": "tests/ci-environment.test.ts",
+      "sha256": "11672bf07f4868a4a48986abdd9d4c3726248541397855b1497eb745c0a07114"
+    },
+    {
+      "path": "tests/cloud-ops-docs.test.ts",
+      "sha256": "286f90a400b6616e8787f9b200a1052d036812f84e875c72dfd11dcf276f00ee"
+    },
+    {
+      "path": "tests/cron-cleanup.test.ts",
+      "sha256": "8774230d44cf164051a1d4fa648fbddc85eb9f437dfdd42b25fde0df788ad483"
+    },
+    {
+      "path": "tests/database-identity.test.ts",
+      "sha256": "cb29e7696b0ec75bf85c52b4982db65f78796d4cf73e65f5def16aff92f992c0"
+    },
+    {
+      "path": "tests/design-lock.test.ts",
+      "sha256": "30f0839145d88826749165c18118c34c178fb6c6d5fc871dfe0e2dcae2101d1e"
+    },
+    {
+      "path": "tests/design-tokens.test.ts",
+      "sha256": "0cd7c0e01d193568cfe59e58aa45a518e846065e75f465fb1ecf3d0299b23489"
+    },
+    {
+      "path": "tests/domain-contracts.test.ts",
+      "sha256": "3e1b13fee5387939f1b0676316b6c7b4e4dbc800fa6864f8efd782b41563f63b"
+    },
+    {
+      "path": "tests/domain-errors.test.ts",
+      "sha256": "fdbbdb5fedc9d8e2f41151bc42d68454ae4790f34b4aa93a701fffe74a971e64"
+    },
+    {
+      "path": "tests/environment.test.ts",
+      "sha256": "df612c731f0847ff9d1c7c01ed678b4aada532772d5709fa15494c7d1656f0dc"
+    },
+    {
+      "path": "tests/i18n.test.ts",
+      "sha256": "426e5df439cb7b4aa26f84a4e0474e5ca11cc334b793a7e3bdc205dd8c6fb02c"
+    },
+    {
+      "path": "tests/idempotency.test.ts",
+      "sha256": "8da4d8ae6aea1037d0510371d77c38d3d6bed0666c43207ae6537ec3739afd9f"
+    },
+    {
+      "path": "tests/media-lifecycle.test.ts",
+      "sha256": "d3e78f1a5d254e434a6043d1d046dfcbf476cb5a08fb998c7691ec4beeb1e17b"
+    },
+    {
+      "path": "tests/neon-prisma-config.test.ts",
+      "sha256": "60af4618ca06c9342a234d74291cc75658c14e57a28589319625dbec3208f3c1"
+    },
+    {
+      "path": "tests/operations.service.test.ts",
+      "sha256": "d6ab4b713941b71e5aa970477439a9b19e70ead08018a5e6d66b930480727037"
+    },
+    {
+      "path": "tests/playwright-config.test.ts",
+      "sha256": "e17e24a0e6dff329184603291167a1aec35c655ea8d4b017f703a9879af5c321"
+    },
+    {
+      "path": "tests/pricing.service.test.ts",
+      "sha256": "b3ea043ca22bcb717ed964b07125fd056c13c05f52ad24bfe956eb5e5859f83e"
+    },
+    {
+      "path": "tests/provider-ports.test.ts",
+      "sha256": "2b724bff4a915f27484f7ccdfa1b2bab834dac30b090ed574e4d296df639d57d"
+    },
+    {
+      "path": "tests/rate-limit-policy.test.ts",
+      "sha256": "d32ac0589fc79b102adf9d2fb3302e9c4badae4261ba7d9c6bc6b05dc5bac775"
+    },
+    {
+      "path": "tests/rbac.test.ts",
+      "sha256": "3f0e409a69d17610c207965bc978f13f22f9c32682578847f217e4f49e2be58e"
+    },
+    {
+      "path": "tests/release-manifest.test.ts",
+      "sha256": "6fcae4a2423ad5c61b73b6278dcbf0bd40be459e028ee4c62fa9407a329a3546"
+    },
+    {
+      "path": "tests/reports.test.ts",
+      "sha256": "38a34fcfc6283f6d80223c65f54da641e6000237dd0426df3e95dc5887cf01e2"
+    },
+    {
+      "path": "tests/reset-test-db.test.ts",
+      "sha256": "fbfdcb2fd22abf05cfc749d4be40028b0c1fea0525d53aa5ac6ec57a9fa24c1b"
+    },
+    {
+      "path": "tests/security-headers.test.ts",
+      "sha256": "142d9a180eaaf4c4126821a9eee8b1b9fc3de8bae0a7bf05a51207a413e5d29a"
+    },
+    {
+      "path": "tests/security/cloud-production-config.test.ts",
+      "sha256": "d767bc105db2e99632b0e09aa648d96f68bc650ce0468ed901eeb3ef0aa1bd15"
+    },
+    {
+      "path": "tests/security/negative-rules.test.ts",
+      "sha256": "aea23e2970fc570922f931d69abe45bfa703c9b943f7b0c12765206749c49736"
+    },
+    {
+      "path": "tests/security/webhook-replay.test.ts",
+      "sha256": "a2db5a3824e17aefd00c84887c3eb507d97d07b8de71ef10667ea40aa34f8034"
+    },
+    {
+      "path": "tests/seed.test.ts",
+      "sha256": "af69de697a0de401b43ea1e02b236c828f4e1bd798da585faed9ad20d8c43027"
+    },
+    {
+      "path": "tests/unit/cloud-contract-docs.test.ts",
+      "sha256": "9276c9d23999b19daa8cecd5eb638c75e69ed127729511ba4cca50a897e31e60"
+    },
+    {
+      "path": "tests/unit/hotel-api-routes.test.ts",
+      "sha256": "cabdee2769791f10bbbcf4c5b4ed79ad42df2b14d0301d0139f565dd52fef704"
+    },
+    {
+      "path": "tests/unit/lookup-tokens.test.ts",
+      "sha256": "4077661d042eab22567bf29edb95c1a1f69fb3554fa379ea35ff8cbc79427151"
+    },
+    {
+      "path": "tests/unit/outbox-lease.test.ts",
+      "sha256": "80f113f6e11cea65c59419f021a981fd385db7a079683abbba69a6ec330d3dd5"
+    },
+    {
+      "path": "tests/unit/vercel-blob-sdk.test.ts",
+      "sha256": "203d91bac8019cf63e64ac915a1c1c316bdd2efeca586a771d53b4da507e66bd"
+    },
+    {
+      "path": "tests/verify-cloud-deployment.test.ts",
+      "sha256": "8b6f3c5534df8009453d857a44244a89de9a2c7383751d1b7b1e7282f1960355"
+    },
+    {
+      "path": "e2e/aurora-business-real-db.spec.ts",
+      "sha256": "cde377a09fe32aeb3bfe8db69c74a78fb42dcf8490825248a769105ff93a0060"
+    },
+    {
+      "path": "e2e/aurora-flows.spec.ts",
+      "sha256": "f1c79e6df73721e1295010a173e487c0794defea25c5939623296408d6833de9"
+    },
+    {
+      "path": "e2e/form-behavior.spec.ts",
+      "sha256": "79cf2ab12e9fc5ca228ca8ccd937659227711186985289a8f24fa21de250b8f7"
+    },
+    {
+      "path": "e2e/interactive-element-audit.spec.ts",
+      "sha256": "45a4e91c25725f456a1a6fe794432f55da970558b9a520f15ec17452536edd17"
+    },
+    {
+      "path": "e2e/layout-safety.spec.ts",
+      "sha256": "a496e9cb8a827ede7743ed68e813e828bb90e741473c9b9daa64fbad278c8ecb"
+    },
+    {
+      "path": "e2e/role-navigation.spec.ts",
+      "sha256": "300ec057577dd7a371451bae981c656aa91453eb37dfba5f258dc1209f93e3dc"
+    },
+    {
+      "path": "e2e/route-smoke.spec.ts",
+      "sha256": "c19911d788fa548a8e74bd2d773c1288eb010a42b86d00346de91eab95aea97e"
+    }
+  ],
+  "fixtureHashes": [
+    {
+      "path": ".agent-os/catalog-lock.json",
+      "sha256": "c2d264f72e949c55c8b863811003ada28acf3bc227d181121fc791052a3af800"
+    },
+    {
+      "path": ".agent-os/commands.json",
+      "sha256": "7fccd4b8579865df319d2ba5cfa1ff48599ab871354e3f637f4061d7c643b38e"
+    },
+    {
+      "path": ".agent-os/discovery.json",
+      "sha256": "cb5034c2df178ec8dc0765b183c294000ce668c52d7d1fb51e5addd501ba63c4"
+    },
+    {
+      "path": ".agent-os/lock.json",
+      "sha256": "50a43a4e172f0afa6a2b77b838055e6394784eadcf659ece0e1e2ecf3121eaa3"
+    },
+    {
+      "path": ".agent-os/state/tasks.json",
+      "sha256": "67024cf9a5bdeb0ec9c209617ead878cebcbae90f3bbb95d3a87b073ce802b2e"
+    },
+    {
+      "path": ".agent-os/state/trajectory.jsonl",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "operations/release-evidence/agent-os-v2-0.1.0/README.md",
+      "sha256": "b586b605aac5ddd7ecf71be8e43d70a9ad26d6e8cf13fc7ee1b9edf3f3dca4fd"
+    },
+    {
+      "path": "operations/release-evidence/agent-os-v2-0.1.0/commands.jsonl",
+      "sha256": "0f06058bbb540ad3b9348331ec46893a74dcab482302d71f74208948d898a391"
+    }
+  ],
+  "diagramHashes": [
+    {
+      "id": "auth-flow",
+      "sourcePath": "docs/architecture/diagrams/auth-flow.mmd",
+      "sourceHash": "9b5820ae68935b531ef1c308611351d4bd89239ba2e41094fa5f3b94ef4b4932",
+      "renderedPath": "docs/architecture/diagrams/rendered/auth-flow.svg",
+      "renderedHash": "fab8c2b6e4616796a916fb9d0d5d8e4de5c3e318c96b4eb3451bbadc99fba58c"
+    },
+    {
+      "id": "authentication-flow",
+      "sourcePath": "docs/architecture/diagrams/authentication-flow.mmd",
+      "sourceHash": "1f6919d60bc53737b02dd66b255d285153e56fd8167f2a19ac67c7dd783cb1cd",
+      "renderedPath": "docs/architecture/diagrams/rendered/authentication-flow.svg",
+      "renderedHash": "b4edf7def85c9bad5d99db2d9d6617a21ecf5c57725c1509077d5e19ca291c24"
+    },
+    {
+      "id": "authorization-flow",
+      "sourcePath": "docs/architecture/diagrams/authorization-flow.mmd",
+      "sourceHash": "359a185e796d27174b55eaaceed279c5dec2d75fefeeb92aba76f6b7189bfaf5",
+      "renderedPath": "docs/architecture/diagrams/rendered/authorization-flow.svg",
+      "renderedHash": "86497a935f411596cd0e65f3d53d13e8d6b3dbc4accdd9575484628a915dc5db"
+    },
+    {
+      "id": "authz-flow",
+      "sourcePath": "docs/architecture/diagrams/authz-flow.mmd",
+      "sourceHash": "bc05fc7f2a42c50fdb72e2b67902d0440cab5556ac162a65cba2a7a68f070ed9",
+      "renderedPath": "docs/architecture/diagrams/rendered/authz-flow.svg",
+      "renderedHash": "1756c061fd2a7c5b7e160cce9e1890b9078105e0b93ce2885eae0212a542d16f"
+    },
+    {
+      "id": "backup-restore-pipeline",
+      "sourcePath": "docs/architecture/diagrams/backup-restore-pipeline.mmd",
+      "sourceHash": "78e093072660747bf97b14ebe68776a88e0f5821aab3d512df2b6c3dda57c9af",
+      "renderedPath": "docs/architecture/diagrams/rendered/backup-restore-pipeline.svg",
+      "renderedHash": "a5e9896ba752e78d2e8c4b949b13acbf2fe310a9a6061494ba2e498367c0aa22"
+    },
+    {
+      "id": "checkout-sequence",
+      "sourcePath": "docs/architecture/diagrams/checkout-sequence.mmd",
+      "sourceHash": "b6ef04c88310aa0815b0b39c266e53a661232f47f4ea275edfaa33bcce23143e",
+      "renderedPath": "docs/architecture/diagrams/rendered/checkout-sequence.svg",
+      "renderedHash": "30bfedf8b822abf8311049c5534d566f3d60884858698a28c49cedaf8a526011"
+    },
+    {
+      "id": "containers",
+      "sourcePath": "docs/architecture/diagrams/containers.mmd",
+      "sourceHash": "422e050dab88506fe7f2aa32c789dbf4ea1c8195f0b644d3feec2fbf98e82c19",
+      "renderedPath": "docs/architecture/diagrams/rendered/containers.svg",
+      "renderedHash": "9bd0824c20bd59f7ae1f0aa500f17d00efb495c3d2bbe1ed2c75b0aaca944888"
+    },
+    {
+      "id": "data-lifecycle",
+      "sourcePath": "docs/architecture/diagrams/data-lifecycle.mmd",
+      "sourceHash": "16a17a2f3f2c0c8368975422d358ed56ba89e43cc8a21d5859dd4cfcfd06e844",
+      "renderedPath": "docs/architecture/diagrams/rendered/data-lifecycle.svg",
+      "renderedHash": "5b9d25ad2cf545756ba46c4d426ed7cc448c90a9b3e9c7a338c1db56e17cef45"
+    },
+    {
+      "id": "data-subject-rights",
+      "sourcePath": "docs/architecture/diagrams/data-subject-rights.mmd",
+      "sourceHash": "e074302fb5a6d2d2903d8c4ad8ef842f77bd2bdd4703a581f85da2a9067b54b9",
+      "renderedPath": "docs/architecture/diagrams/rendered/data-subject-rights.svg",
+      "renderedHash": "52082797ab59ac9f567ed13ccfdb895424e19e8c964a9bc364d45f919360a57d"
+    },
+    {
+      "id": "deployment",
+      "sourcePath": "docs/architecture/diagrams/deployment.mmd",
+      "sourceHash": "cda706eb9afcb32d68e34bb8e767a0eaa4658bdb4cb65efbac0500ccbfc97d63",
+      "renderedPath": "docs/architecture/diagrams/rendered/deployment.svg",
+      "renderedHash": "a6c7940074a7b9f97b12ef0223dcb0de670662318aa336467322643fbbeef391"
+    },
+    {
+      "id": "email-outbox-flow",
+      "sourcePath": "docs/architecture/diagrams/email-outbox-flow.mmd",
+      "sourceHash": "77db43cede28ab4c0801c689d264899b1fc42fe531794ed89d68e6688d9607b9",
+      "renderedPath": "docs/architecture/diagrams/rendered/email-outbox-flow.svg",
+      "renderedHash": "9cdf7cf044f4632f361df75307198a339eeb236500a01a93649fd8ca25ce7a68"
+    },
+    {
+      "id": "erd",
+      "sourcePath": "docs/architecture/diagrams/erd.mmd",
+      "sourceHash": "1e1f0d771345438851841b8ff98bb002146d49afb0f965e5af3c52703904b11f",
+      "renderedPath": "docs/architecture/diagrams/rendered/erd.svg",
+      "renderedHash": "c5358918ec969e98c1072e2171fd94fd9a8222c91e9a5c6033c3005c0b6beab1"
+    },
+    {
+      "id": "job-retry-flow",
+      "sourcePath": "docs/architecture/diagrams/job-retry-flow.mmd",
+      "sourceHash": "a1e3ea67395b23574dd35677a1ab1b2d63d3a164d5ea3cef52ceb794f972a4b6",
+      "renderedPath": "docs/architecture/diagrams/rendered/job-retry-flow.svg",
+      "renderedHash": "39d49204989808a160c45ad899bff99d92183eacaffb106fc9f8e6f7a87bbf04"
+    },
+    {
+      "id": "migration-flow",
+      "sourcePath": "docs/architecture/diagrams/migration-flow.mmd",
+      "sourceHash": "b7c95fb34eb7a1081b83d0483922a96817f714bb9e6338470ffc65afb1bb7239",
+      "renderedPath": "docs/architecture/diagrams/rendered/migration-flow.svg",
+      "renderedHash": "c84ceb9a7737be06b06f5c9ab6ecbc9014f01111715096f2853de2a6f61fb06b"
+    },
+    {
+      "id": "modules",
+      "sourcePath": "docs/architecture/diagrams/modules.mmd",
+      "sourceHash": "ce420119447818b4ac58a73c12fed7f62fcc31531bc176fa488e18435ced3952",
+      "renderedPath": "docs/architecture/diagrams/rendered/modules.svg",
+      "renderedHash": "7a8dd59ed29a1ce2e8acee50674dd4ee786e525fd669d699278d09696dbfca49"
+    },
+    {
+      "id": "monitoring-architecture",
+      "sourcePath": "docs/architecture/diagrams/monitoring-architecture.mmd",
+      "sourceHash": "bbe1abe34e3a5cb75448c2d9592e5b85fbb103609cf958e230dc2482cde39f62",
+      "renderedPath": "docs/architecture/diagrams/rendered/monitoring-architecture.svg",
+      "renderedHash": "b95b9a8d3faebb69410469794ed6beea824eb5ba7b6ab297ccad092338fa24eb"
+    },
+    {
+      "id": "payment-state-machine",
+      "sourcePath": "docs/architecture/diagrams/payment-state-machine.mmd",
+      "sourceHash": "50dfd4b0f91769204a77648c7da93ca3d8792ad4f42df5a6f3e5077c1ec507b3",
+      "renderedPath": "docs/architecture/diagrams/rendered/payment-state-machine.svg",
+      "renderedHash": "e026aec48ae433aa8cfb791f81bb821aa684a38d32ccfc1bbf4f4ece2238057a"
+    },
+    {
+      "id": "release-flow",
+      "sourcePath": "docs/architecture/diagrams/release-flow.mmd",
+      "sourceHash": "199acafdd75338522f6ea7c0f8cb49adad620a31732feab633bc293c5056031b",
+      "renderedPath": "docs/architecture/diagrams/rendered/release-flow.svg",
+      "renderedHash": "503942bcd43fc70f2d673a613634d255c00c3ed690fe557eab095520a99e8718"
+    },
+    {
+      "id": "request-flow",
+      "sourcePath": "docs/architecture/diagrams/request-flow.mmd",
+      "sourceHash": "56de01db486d6e1594133bbef6a88d818e993f01f376a47887e9cd2e52e3567b",
+      "renderedPath": "docs/architecture/diagrams/rendered/request-flow.svg",
+      "renderedHash": "4884a8e793de704013f3b67a5af155a6e0b0b24637028c81aded8bb9ddddd6e9"
+    },
+    {
+      "id": "role-permission-map",
+      "sourcePath": "docs/architecture/diagrams/role-permission-map.mmd",
+      "sourceHash": "eb99c751998ba66cc6ca5a0cb60606e323189d9a475ab0cedd016e3130f84dbd",
+      "renderedPath": "docs/architecture/diagrams/rendered/role-permission-map.svg",
+      "renderedHash": "7c33ba601601acc643cdc8dd1865ca9924dc6abc6f7286cc7d6f93c44d076a3f"
+    },
+    {
+      "id": "session-lifecycle",
+      "sourcePath": "docs/architecture/diagrams/session-lifecycle.mmd",
+      "sourceHash": "19a342ff580ac423c8e71364e56624515df400af5e20af4090fbcc5d8cc608e0",
+      "renderedPath": "docs/architecture/diagrams/rendered/session-lifecycle.svg",
+      "renderedHash": "232e8b46c0dcc46f1483cf66ee85ba7c2bf13d98ba400a9a41960aa16a447354"
+    },
+    {
+      "id": "system-context",
+      "sourcePath": "docs/architecture/diagrams/system-context.mmd",
+      "sourceHash": "f7bcdf86bf0a973b7db9f308e49d7cf825bacbda0644b0d8199f01c164d3364b",
+      "renderedPath": "docs/architecture/diagrams/rendered/system-context.svg",
+      "renderedHash": "8501b513b49bd24a7cd293a677e01d6bf8b79e798b1e18399920e115ca7fd82f"
+    },
+    {
+      "id": "upload-flow",
+      "sourcePath": "docs/architecture/diagrams/upload-flow.mmd",
+      "sourceHash": "f8ea2e4bc4dbc8ff874959c28e0e3751dc6cfdaee6d66f49f422fa9085390a5e",
+      "renderedPath": "docs/architecture/diagrams/rendered/upload-flow.svg",
+      "renderedHash": "45745286619c006dbbd8b1d946b52547209200a680d8498a3deb6e03af1a59ee"
+    },
+    {
+      "id": "verification-idempotency-sequence",
+      "sourcePath": "docs/architecture/diagrams/verification-idempotency-sequence.mmd",
+      "sourceHash": "1a9b8e426bd1d4a1181ed45d7de84489b2580dbec8cf1f6ef043d17bc8ccffef",
+      "renderedPath": "docs/architecture/diagrams/rendered/verification-idempotency-sequence.svg",
+      "renderedHash": "e87219d74b6bbe2c3e063198de2fa90fd189f78ae6a1cf2e80d5567c4b9b085f"
+    },
+    {
+      "id": "webhook-verification",
+      "sourcePath": "docs/architecture/diagrams/webhook-verification.mmd",
+      "sourceHash": "f673d3d867a4908a88ea3fe2ef56313a7222119c2e66226f2880bcf51f510e89",
+      "renderedPath": "docs/architecture/diagrams/rendered/webhook-verification.svg",
+      "renderedHash": "c97dd1e740c3350047da8d93bfc25acdc003ba42de03dbe84644478d0903be4d"
+    }
+  ],
+  "components": [
+    {
+      "id": "agent-os-kernel",
+      "version": "0.1.0",
+      "sourceUrl": "manifest:implementationFiles",
+      "sourceSha256": "8f451035f39b0b9b4ac052f97a4cb22d895c833ab2363b4e47ad71ebea00d044",
+      "license": "MIT",
+      "trust": "verified"
+    }
+  ],
+  "executionPolicy": {
+    "filesystem": "workspace-write",
+    "workspaceRoots": [
+      "."
+    ],
+    "network": "denied-unless-declared",
+    "externalWrites": "deny",
+    "destructiveActions": "approval-required",
+    "secrets": "explicit-allowlist"
+  },
+  "narrowedPolicies": {
+    "codex": {
+      "filesystem": "workspace-write"
+    },
+    "claude": {
+      "filesystem": "workspace-write",
+      "hooksEnabled": true
+    },
+    "antigravity": {
+      "filesystem": "workspace-write",
+      "bridgeEnabled": true
+    }
+  },
+  "byteBudgetResults": {
+    "measured": true,
+    "hosts": {
+      "antigravity": {
+        "limits": {
+          "instructionBytes": 65536,
+          "skillDescriptionBytes": 131072,
+          "toolSchemaBytes": 131072
+        },
+        "measured": {
+          "instructionBytes": 105,
+          "skillDescriptionBytes": 7272,
+          "toolSchemaBytes": 16477
+        }
+      },
+      "claude": {
+        "limits": {
+          "instructionBytes": 32768,
+          "skillDescriptionBytes": 65536,
+          "toolSchemaBytes": 65536
+        },
+        "measured": {
+          "instructionBytes": 123,
+          "skillDescriptionBytes": 7272,
+          "toolSchemaBytes": 16477
+        }
+      },
+      "codex": {
+        "limits": {
+          "instructionBytes": 65536,
+          "skillDescriptionBytes": 131072,
+          "toolSchemaBytes": 131072
+        },
+        "measured": {
+          "instructionBytes": 2287,
+          "skillDescriptionBytes": 7272,
+          "toolSchemaBytes": 16477
+        }
+      },
+      "copilot": {
+        "limits": {
+          "instructionBytes": 16384,
+          "skillDescriptionBytes": 32768,
+          "toolSchemaBytes": 32768
+        },
+        "measured": {
+          "instructionBytes": 121,
+          "skillDescriptionBytes": 7272,
+          "toolSchemaBytes": 16477
+        }
+      },
+      "gemini": {
+        "limits": {
+          "instructionBytes": 32768,
+          "skillDescriptionBytes": 65536,
+          "toolSchemaBytes": 65536
+        },
+        "measured": {
+          "instructionBytes": 105,
+          "skillDescriptionBytes": 7272,
+          "toolSchemaBytes": 16477
+        }
+      }
+    }
+  },
+  "taskStateSchemaVersion": "1.0.0",
+  "trajectorySchemaVersion": "1.0.0",
+  "knownSkippedChecks": [
+    {
+      "id": "codex-live-host",
+      "reason": "Installed desktop executable is not accessible from this terminal",
+      "rerun": "Run clean-fixture host conformance from Codex desktop"
+    },
+    {
+      "id": "claude-live-host",
+      "reason": "Invoking an external coding agent is outside this release verifier's authority",
+      "rerun": "Run clean-fixture conformance with the installed Claude CLI"
+    },
+    {
+      "id": "antigravity-live-host",
+      "reason": "Invoking an external coding agent is outside this release verifier's authority",
+      "rerun": "Run clean-fixture conformance through the Antigravity bridge"
+    },
+    {
+      "id": "production-integrations",
+      "reason": "Production providers and deployment are outside local release scope",
+      "rerun": "Run the deployment-specific staging verification plan"
+    }
+  ],
+  "residualRisks": [
+    "Live provider callbacks and production infrastructure require staging verification",
+    "Live clean-session host conformance remains explicitly unverified by the local static suite"
+  ],
+  "rollbackCheckpoint": "cf72f353ffd56db3779c1dd9fe4e734d10a1bd06",
+  "requiredGates": [
+    "root-ci",
+    "root-audit",
+    "root-lint",
+    "root-typecheck",
+    "root-test",
+    "root-build",
+    "root-e2e",
+    "catalog-drift",
+    "diagram-validation",
+    "doctor",
+    "converge",
+    "golden-next",
+    "starter-ci",
+    "starter-audit",
+    "starter-lint",
+    "starter-typecheck",
+    "starter-test",
+    "starter-build",
+    "starter-e2e"
+  ],
+  "commandEvidencePath": "operations/release-evidence/agent-os-v2-0.1.0/commands.jsonl",
+  "finalAttestationPath": "operations/release-evidence/agent-os-v2-0.1.0/final-attestation.json",
+  "environment": {
+    "nodeVersion": "v24.16.0",
+    "npmVersion": "11.13.0",
+    "os": "Windows_NT"
+  },
+  "evidencePath": "operations/release-evidence/agent-os-v2-0.1.0/README.md",
+  "gatesSkipped": false
+}

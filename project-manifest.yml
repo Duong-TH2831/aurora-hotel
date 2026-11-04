@@ -1,0 +1,88 @@
+schemaVersion: 1
+project:
+  name: Aurora Hotel
+  type: next-monolith
+  primaryGoal: Increase completed direct room bookings through a fast,
+    transparent, trustworthy mobile-first booking flow while keeping day-level
+    price and availability accurate and preventing overbooking.
+blueprint:
+  path: project-blueprint.yml
+  sha256: 25feb3781b3d7f613ccd938afd5caed66f8314c7aba16d4e08f61059a5471866
+experience:
+  path: experience-blueprint.yml
+  sha256: 546a6739c37c8b5a172a891bb3082bac345212df9078fb2bfbda3b8b814a8c8b
+profile: next-monolith
+stack:
+  language: typescript
+  runtime: node
+  framework: next
+  frameworkVersion: 15.5.22
+  packageManager: npm
+capabilities:
+  - accessibility
+  - authentication
+  - background-jobs
+  - backup-restore
+  - billing
+  - commerce
+  - database
+  - email
+  - file-upload
+  - i18n
+  - observability
+  - privacy
+  - rbac
+  - seo
+  - session-registry
+  - web-experience
+  - webhooks
+locales:
+  - vi
+  - en
+hosting:
+  target: Vercel Hobby for the graduation-demo application with Neon Free PostgreSQL and Vercel Blob (aurora-media-private for quarantine and aurora-media-public for validated delivery). External services remain behind adapters and the project runs without mandatory local PostgreSQL or Docker dependencies. Paid upgrades require explicit owner approval.
+data:
+  classification: confidential
+  database: postgresql
+security:
+  baseline: owasp-asvs-l2
+execution:
+  filesystem: workspace-write
+  workspaceRoots:
+    - .
+  network: denied-unless-declared
+  externalWrites: deny
+  destructiveActions: approval-required
+  secrets: explicit-allowlist
+context:
+  instructionBudget: host-aware
+  retrieval: disabled
+state:
+  format: agent-os-v1
+  trajectory: redacted
+  retention: project-policy
+billing:
+  provider: vnpay
+quality:
+  gates:
+    - lint
+    - typecheck
+    - test
+    - build
+    - e2e
+diagrams:
+  required:
+    - auth-flow
+    - authz-flow
+    - containers
+    - data-lifecycle
+    - deployment
+    - erd
+    - migration-flow
+    - modules
+    - release-flow
+    - request-flow
+    - role-permission-map
+    - session-lifecycle
+    - system-context
+    - verification-idempotency-sequence

@@ -1,0 +1,427 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider   = "prisma-client-js"
+  engineType = "client"
+}
+
+model Role {
+  id        String   @id @default(cuid())
+  name      String
+  // Allowed values: "GUEST" | "CUSTOMER" | "RECEPTIONIST" | "HOUSEKEEPER" | "MANAGER" | "ADMIN"
+  type      String   @unique
+  users     User[]
+  createdAt DateTime @default(now())
+}
+
+model User {
+  id            String        @id @default(cuid())
+  email         String        @unique
+  emailVerified DateTime?
+  password      String?
+  name          String?
+  phone         String?
+  roleId        String
+  role          Role          @relation(fields: [roleId], references: [id])
+  bookings      Booking[]     @relation("GuestBookings")
+  auditLogs     AuditLog[]    @relation("UserAuditLogs")
+  couponUsages  CouponUsage[]
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+
+  @@index([roleId])
+}
+
+model RoomCategory {
+  id               String            @id @default(cuid())
+  slug             String            @unique
+  name             String
+  // Allowed values: "DELUXE_KING" | "DELUXE_TWIN" | "EXECUTIVE_SUITE" | "PRESIDENTIAL_SUITE"
+  type             String            @unique
+  description      String
+  basePrice        Int // Price in VND
+  maxOccupancy     Int               @default(2)
+  sizeSqm          Int               @default(35)
+  bedConfiguration String            @default("1 King Bed")
+  amenities        Json // Array of amenity strings
+  images           Json // Array of image URL strings
+  isActive         Boolean           @default(true)
+  ratePlans        RatePlan[]
+  rooms            Room[]
+  availabilities   DayAvailability[]
+  bookings         Booking[]
+  bookingRooms     BookingRoom[]
+  inventoryBlocks  InventoryBlock[]
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+
+  @@index([isActive])
+}
+
+model RatePlan {
+  id                String        @id @default(cuid())
+  code              String        @unique
+  name              String
+  roomCategoryId    String
+  roomCategory      RoomCategory  @relation(fields: [roomCategoryId], references: [id])
+  // Allowed values: "FLEXIBLE_BREAKFAST" | "NON_REFUNDABLE" | "EXTENDED_STAY_PROMO"
+  planType          String
+  priceMultiplier   Float         @default(1.0)
+  cancelPolicyDays  Int           @default(3)
+  breakfastIncluded Boolean       @default(true)
+  isActive          Boolean       @default(true)
+  bookings          Booking[]
+  bookingRooms      BookingRoom[]
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+
+  @@index([roomCategoryId])
+  @@index([isActive])
+}
+
+model Room {
+  id             String           @id @default(cuid())
+  number         String           @unique
+  roomCategoryId String
+  roomCategory   RoomCategory     @relation(fields: [roomCategoryId], references: [id])
+  floor          Int              @default(1)
+  // Allowed values: "CLEAN" | "DIRTY" | "INSPECTING" | "MAINTENANCE"
+  status         String           @default("CLEAN")
+  notes          String?
+  assignments    RoomAssignment[]
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+
+  @@index([roomCategoryId])
+  @@index([status])
+}
+
+model DayAvailability {
+  id             String       @id @default(cuid())
+  roomCategoryId String
+  roomCategory   RoomCategory @relation(fields: [roomCategoryId], references: [id])
+  date           DateTime     @db.Date
+  totalInventory Int          @default(10)
+  bookedCount    Int          @default(0)
+  holdCount      Int          @default(0)
+  blockedCount   Int          @default(0)
+  version        Int          @default(0)
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+
+  @@unique([roomCategoryId, date])
+  @@index([date])
+}
+
+model InventoryBlock {
+  id              String       @id @default(cuid())
+  roomCategoryId  String
+  roomCategory    RoomCategory @relation(fields: [roomCategoryId], references: [id])
+  startDate       DateTime     @db.Date
+  endDate         DateTime     @db.Date
+  blockedQuantity Int          @default(1)
+  // Allowed values: "MAINTENANCE" | "VIP_HOLD" | "MANUAL_BLOCK"
+  reason          String
+  createdBy       String?
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+
+  @@index([roomCategoryId])
+  @@index([startDate, endDate])
+}
+
+model Booking {
+  id              String           @id @default(cuid())
+  bookingNumber   String           @unique
+  guestId         String?
+  guest           User?            @relation("GuestBookings", fields: [guestId], references: [id])
+  ratePlanId      String
+  ratePlan        RatePlan         @relation(fields: [ratePlanId], references: [id])
+  roomCategoryId  String
+  roomCategory    RoomCategory     @relation(fields: [roomCategoryId], references: [id])
+  checkIn         DateTime         @db.Date
+  checkOut        DateTime         @db.Date
+  nights          Int
+  numGuests       Int              @default(1)
+  subtotal        Int              @default(0) // Room subtotal in VND
+  serviceTotal    Int              @default(0) // Service subtotal in VND
+  discountTotal   Int              @default(0) // Promo/Coupon discount in VND
+  taxAndFeeTotal  Int              @default(0) // Taxes and fees in VND
+  totalAmount     Int // Final total in VND
+  currency        String           @default("VND")
+  // Allowed values: "DRAFT" | "PENDING_PAYMENT" | "CONFIRMED" | "CHECKED_IN" | "CHECKED_OUT" | "CANCELLED" | "NO_SHOW"
+  status          String           @default("PENDING_PAYMENT")
+  guestName       String
+  guestEmail      String
+  guestPhone      String
+  specialRequests String?
+  bookingRooms    BookingRoom[]
+  bookingNights   BookingNight[]
+  bookingServices BookingService[]
+  payments        Payment[]
+  refunds         Refund[]
+  roomAssignments RoomAssignment[]
+  couponUsage     CouponUsage?
+  auditLogs       AuditLog[]       @relation("BookingAuditLogs")
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  @@index([guestId])
+  @@index([roomCategoryId])
+  @@index([status])
+  @@index([checkIn, checkOut])
+}
+
+model BookingRoom {
+  id             String         @id @default(cuid())
+  bookingId      String
+  booking        Booking        @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  roomCategoryId String
+  roomCategory   RoomCategory   @relation(fields: [roomCategoryId], references: [id])
+  ratePlanId     String?
+  ratePlan       RatePlan?      @relation(fields: [ratePlanId], references: [id])
+  pricePerNight  Int // VND snapshot
+  numGuests      Int            @default(1)
+  guests         BookingGuest[]
+  nights         BookingNight[]
+  createdAt      DateTime       @default(now())
+
+  @@index([bookingId])
+  @@index([roomCategoryId])
+}
+
+model BookingNight {
+  id             String       @id @default(cuid())
+  bookingId      String
+  booking        Booking      @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  bookingRoomId  String?
+  bookingRoom    BookingRoom? @relation(fields: [bookingRoomId], references: [id], onDelete: Cascade)
+  date           DateTime     @db.Date
+  basePrice      Int // VND snapshot
+  discountAmount Int          @default(0) // VND snapshot
+  finalPrice     Int // VND snapshot
+  createdAt      DateTime     @default(now())
+
+  @@index([bookingId])
+  @@index([bookingRoomId])
+  @@index([date])
+}
+
+model BookingGuest {
+  id            String      @id @default(cuid())
+  bookingRoomId String
+  bookingRoom   BookingRoom @relation(fields: [bookingRoomId], references: [id], onDelete: Cascade)
+  name          String
+  email         String?
+  phone         String?
+  isPrimary     Boolean     @default(false)
+  createdAt     DateTime    @default(now())
+
+  @@index([bookingRoomId])
+}
+
+model Service {
+  id              String           @id @default(cuid())
+  code            String           @unique
+  name            String
+  description     String?
+  price           Int // VND
+  // Allowed values: "PER_STAY" | "PER_NIGHT" | "PER_GUEST"
+  unit            String           @default("PER_STAY")
+  isActive        Boolean          @default(true)
+  bookingServices BookingService[]
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  @@index([isActive])
+}
+
+model BookingService {
+  id          String   @id @default(cuid())
+  bookingId   String
+  booking     Booking  @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  serviceId   String
+  service     Service  @relation(fields: [serviceId], references: [id])
+  serviceName String // Snapshot
+  price       Int // Snapshot VND
+  quantity    Int      @default(1)
+  totalAmount Int // VND snapshot
+  createdAt   DateTime @default(now())
+
+  @@index([bookingId])
+  @@index([serviceId])
+}
+
+model Promotion {
+  id              String   @id @default(cuid())
+  code            String   @unique
+  name            String
+  description     String?
+  discountPercent Float    @default(0.0)
+  discountAmount  Int      @default(0) // VND
+  startDate       DateTime @db.Date
+  endDate         DateTime @db.Date
+  roomCategoryIds Json? // Filter array of strings
+  ratePlanIds     Json? // Filter array of strings
+  isActive        Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([isActive])
+  @@index([startDate, endDate])
+}
+
+model Coupon {
+  id                String        @id @default(cuid())
+  code              String        @unique
+  name              String
+  discountPercent   Float         @default(0.0)
+  discountAmount    Int           @default(0) // VND
+  minBookingAmount  Int           @default(0) // VND
+  maxDiscountAmount Int? // VND cap
+  startDate         DateTime
+  endDate           DateTime
+  maxUsageTotal     Int           @default(100)
+  maxUsagePerUser   Int           @default(1)
+  currentUsageCount Int           @default(0)
+  isActive          Boolean       @default(true)
+  usages            CouponUsage[]
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+
+  @@index([code])
+  @@index([isActive])
+}
+
+model CouponUsage {
+  id              String   @id @default(cuid())
+  couponId        String
+  coupon          Coupon   @relation(fields: [couponId], references: [id])
+  bookingId       String   @unique
+  booking         Booking  @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  userId          String?
+  user            User?    @relation(fields: [userId], references: [id])
+  discountApplied Int // VND snapshot
+  usedAt          DateTime @default(now())
+
+  @@index([couponId])
+  @@index([userId])
+}
+
+model RoomAssignment {
+  id         String   @id @default(cuid())
+  bookingId  String
+  booking    Booking  @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  roomId     String
+  room       Room     @relation(fields: [roomId], references: [id])
+  assignedAt DateTime @default(now())
+  assignedBy String?
+  notes      String?
+
+  @@index([bookingId])
+  @@index([roomId])
+}
+
+model Payment {
+  id             String         @id @default(cuid())
+  bookingId      String
+  booking        Booking        @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  amount         Int
+  currency       String         @default("VND")
+  // Allowed values: "CREDIT_CARD" | "BANK_TRANSFER" | "CASH" | "MOCK_PAYMENT"
+  method         String
+  // Allowed values: "PENDING" | "AUTHORIZED" | "PAID" | "FAILED" | "CANCELLED" | "REFUNDED"
+  status         String         @default("PENDING")
+  transactionRef String?
+  gatewayPayload Json?
+  events         PaymentEvent[]
+  refunds        Refund[]
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+
+  @@index([bookingId])
+  @@index([status])
+}
+
+model PaymentEvent {
+  id             String   @id @default(cuid())
+  paymentId      String
+  payment        Payment  @relation(fields: [paymentId], references: [id], onDelete: Cascade)
+  previousStatus String
+  newStatus      String
+  eventPayload   Json?
+  providerRef    String?
+  createdAt      DateTime @default(now())
+
+  @@index([paymentId])
+  @@index([createdAt])
+}
+
+model Refund {
+  id             String    @id @default(cuid())
+  paymentId      String
+  payment        Payment   @relation(fields: [paymentId], references: [id], onDelete: Cascade)
+  bookingId      String
+  booking        Booking   @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  amount         Int // VND
+  currency       String    @default("VND")
+  reason         String?
+  // Allowed values: "PENDING" | "PROCESSED" | "FAILED" | "REJECTED"
+  status         String    @default("PENDING")
+  idempotencyKey String    @unique
+  transactionRef String?
+  processedAt    DateTime?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  @@index([paymentId])
+  @@index([bookingId])
+  @@index([status])
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  actorId    String?
+  actor      User?    @relation("UserAuditLogs", fields: [actorId], references: [id])
+  bookingId  String?
+  booking    Booking? @relation("BookingAuditLogs", fields: [bookingId], references: [id])
+  action     String
+  entityType String
+  entityId   String?
+  payload    Json?
+  ipAddress  String?
+  userAgent  String?
+  createdAt  DateTime @default(now())
+
+  @@index([entityType, entityId])
+  @@index([actorId])
+  @@index([bookingId])
+  @@index([createdAt])
+}
+
+model EmailOutbox {
+  id        String    @id @default(cuid())
+  type      String
+  payload   Json
+  // Allowed values: "PENDING" | "SENT" | "FAILED"
+  status    String    @default("PENDING")
+  attempts  Int       @default(0)
+  lastError String?
+  createdAt DateTime  @default(now())
+  sentAt    DateTime?
+
+  @@index([status, createdAt])
+}
+
+model CheckoutIdempotency {
+  key         String   @id
+  userId      String
+  requestHash String
+  bookingId   String?
+  createdAt   DateTime @default(now())
+
+  @@index([userId])
+}
