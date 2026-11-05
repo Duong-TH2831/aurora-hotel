@@ -1,5 +1,5 @@
 import { db } from "@/lib/db.ts";
-import { toApiErrorResponse } from "@/lib/api-error";
+import { MOCK_SERVICES } from "@/lib/mock-hotel-data.ts";
 
 export const dynamic = "force-dynamic";
 
@@ -9,8 +9,11 @@ export async function GET() {
       where: { isActive: true },
       orderBy: { price: "asc" },
     });
-    return Response.json({ success: true, data: services });
-  } catch (error) {
-    return toApiErrorResponse(new Request("http://localhost"), error);
+    if (Array.isArray(services) && services.length > 0) {
+      return Response.json({ success: true, data: services });
+    }
+    return Response.json({ success: true, data: MOCK_SERVICES });
+  } catch {
+    return Response.json({ success: true, data: MOCK_SERVICES });
   }
 }

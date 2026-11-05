@@ -4,6 +4,7 @@ import { EditorialHeader } from "@/components/layout/EditorialHeader";
 import { EditorialFooter } from "@/components/layout/EditorialFooter";
 import { RoomDetailGallery } from "@/components/rooms/RoomDetailGallery";
 import { db } from "@/lib/db";
+import { findMockCategory } from "@/lib/mock-hotel-data";
 import type { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
@@ -15,9 +16,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   try {
-    const category = await db.roomCategory.findUnique({
+    let category = await db.roomCategory.findUnique({
       where: { slug, isActive: true },
     });
+    if (!category) {
+      category = (findMockCategory(slug) as unknown as typeof category) || null;
+    }
     if (!category) return { title: "Room Not Found | Aurora Hotel" };
 
     return {
@@ -25,6 +29,13 @@ export async function generateMetadata({
       description: category.description.slice(0, 160),
     };
   } catch {
+    const mock = findMockCategory(slug);
+    if (mock) {
+      return {
+        title: `${mock.name} | Aurora Hotel`,
+        description: mock.description.slice(0, 160),
+      };
+    }
     return { title: "Chi tiết hạng phòng | Aurora Hotel" };
   }
 }
@@ -39,7 +50,7 @@ export default async function RoomDetailPage({
   const { slug } = await params;
   const search = await searchParams;
 
-  let category = null;
+  let category: any = null;
   try {
     category = await db.roomCategory.findUnique({
       where: { slug, isActive: true },
@@ -49,6 +60,10 @@ export default async function RoomDetailPage({
     });
   } catch (error) {
     console.warn(`[RoomDetailPage] DB lookup failed for slug: ${slug}`, error);
+  }
+
+  if (!category) {
+    category = findMockCategory(slug);
   }
 
   if (!category) {

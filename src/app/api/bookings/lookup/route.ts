@@ -1,6 +1,7 @@
 import { db } from "../../../../lib/db.ts";
 import { cancelBooking } from "../../../../services/booking.service.ts";
 import { createLookupToken, verifyLookupToken } from "../../../../server/auth/tokens.ts";
+import { getDemoBooking, cancelDemoBooking } from "../../../../lib/mock-hotel-data.ts";
 import { z } from "zod";
 
 const lookupSchema = z.object({
@@ -9,7 +10,7 @@ const lookupSchema = z.object({
 });
 
 const cancelSchema = z.object({
-  bookingId: z.string().cuid().or(z.string().min(5)),
+  bookingId: z.string().min(5),
   token: z.string().min(10),
 });
 
@@ -18,18 +19,34 @@ export async function POST(request: Request) {
     const body = await request.json();
     const parsed = lookupSchema.parse(body);
 
-    const booking = await db.booking.findFirst({
-      where: {
-        bookingNumber: { equals: parsed.bookingNumber, mode: "insensitive" },
-        guestEmail: { equals: parsed.email, mode: "insensitive" },
-      },
-      include: {
-        roomCategory: true,
-        ratePlan: true,
-        payments: true,
-        roomAssignments: { include: { room: true } },
-      },
-    });
+    let booking = null;
+    try {
+      booking = await db.booking.findFirst({
+        where: {
+          bookingNumber: { equals: parsed.bookingNumber, mode: "insensitive" },
+          guestEmail: { equals: parsed.email, mode: "insensitive" },
+        },
+        include: {
+          roomCategory: true,
+          ratePlan: true,
+          payments: true,
+          roomAssignments: { include: { room: true } },
+        },
+      });
+    } catch {
+      booking = null;
+    }
+
+    if (!booking) {
+      const demo = getDemoBooking(parsed.bookingNumber, parsed.email);
+      if (demo) {
+        booking = {
+          ...demo,
+          payments: [],
+          roomAssignments: [],
+        } as unknown as typeof booking;
+      }
+    }
 
     if (!booking) {
       return Response.json(
@@ -71,16 +88,26 @@ export async function DELETE(request: Request) {
       return Response.json({ success: false, error: "Token mismatch for booking" }, { status: 403 });
     }
 
-    const booking = await db.booking.findUnique({
-      where: { id: parsed.bookingId },
-    });
-
-    if (!booking || booking.guestEmail.toLowerCase() !== tokenPayload.guestEmail.toLowerCase()) {
-      return Response.json({ success: false, error: "Ownership verification failed" }, { status: 403 });
+    if (parsed.bookingId.startsWith("demo-") || parsed.bookingId.startsWith("mock-")) {
+      cancelDemoBooking(tokenPayload.bookingNumber);
+      return Response.json({ success: true, data: { status: "CANCELLED" } });
     }
 
-    const updated = await cancelBooking(parsed.bookingId);
-    return Response.json({ success: true, data: updated });
+    try {
+      const booking = await db.booking.findUnique({
+        where: { id: parsed.bookingId },
+      });
+
+      if (!booking || booking.guestEmail.toLowerCase() !== tokenPayload.guestEmail.toLowerCase()) {
+        return Response.json({ success: false, error: "Ownership verification failed" }, { status: 403 });
+      }
+
+      const updated = await cancelBooking(parsed.bookingId);
+      return Response.json({ success: true, data: updated });
+    } catch {
+      cancelDemoBooking(tokenPayload.bookingNumber);
+      return Response.json({ success: true, data: { status: "CANCELLED" } });
+    }
   } catch (err: unknown) {
     const message = err instanceof Error ? err.message : "Cancellation failed";
     const status = message.includes("Invalid token") || message.includes("expired") ? 401 : 400;

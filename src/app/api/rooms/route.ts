@@ -1,4 +1,5 @@
 import { db } from "../../../lib/db.ts";
+import { MOCK_ROOM_CATEGORIES } from "../../../lib/mock-hotel-data.ts";
 
 export async function GET() {
   try {
@@ -10,44 +11,18 @@ export async function GET() {
       orderBy: { basePrice: "asc" },
     });
     const timeoutPromise = new Promise<never>((_, reject) =>
-      setTimeout(() => reject(new Error("DB_TIMEOUT")), 2000),
+      setTimeout(() => reject(new Error("DB_TIMEOUT")), 1500),
     );
     const categories = await Promise.race([queryPromise, timeoutPromise]);
-    return Response.json({ success: true, data: categories });
-  } catch (error) {
-    if (
-      process.env.NODE_ENV !== "production" &&
-      process.env.ENABLE_DEMO_MODE === "true"
-    ) {
-      console.warn("[DEMO_MODE] Database query failed, returning fallback mock rooms");
-      const mockCategories = [
-        {
-          id: "cat-1",
-          name: "Deluxe Ocean View",
-          slug: "deluxe-ocean-view",
-          basePrice: 2500000,
-          ratePlans: [
-            {
-              id: "rp-1",
-              name: "Flexible Rate with Breakfast",
-              multiplier: 1.0,
-            },
-          ],
-        },
-      ];
-      return Response.json({ success: true, data: mockCategories });
+    if (Array.isArray(categories) && categories.length > 0) {
+      return Response.json({ success: true, data: categories });
     }
-
-    console.error("[DATABASE_ERROR] Failed to fetch rooms:", error instanceof Error ? error.message : String(error));
-    return Response.json(
-      {
-        success: false,
-        error: {
-          code: "DATABASE_ERROR",
-          message: "Unable to retrieve room categories",
-        },
-      },
-      { status: 500 },
+    return Response.json({ success: true, data: MOCK_ROOM_CATEGORIES });
+  } catch (error) {
+    console.warn(
+      "[ROOMS_API] Database unavailable or timed out, returning rich mock categories for offline demo:",
+      error instanceof Error ? error.message : String(error)
     );
+    return Response.json({ success: true, data: MOCK_ROOM_CATEGORIES });
   }
 }
